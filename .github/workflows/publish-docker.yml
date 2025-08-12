@@ -6,10 +6,6 @@ on:
     branches:
       - master
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,10 +24,10 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/${{ inputs.name_suffix }}
+        images: ghcr.io/${{ github.repository }}/sample-app
         tags: |
           type=match,pattern=(?<=\/)\d+\.\d+\.\d+.*
-          type=edge,branch=master
+          type=master,branch=master
           type=sha
           type=ref,event=pr
 
