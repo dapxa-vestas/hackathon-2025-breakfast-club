@@ -26,10 +26,10 @@ jobs:
       with:
         images: ghcr.io/${{ github.repository }}/sample-app
         tags: |
-          type=match,pattern=(?<=\/)\d+\.\d+\.\d+.*
-          type=master,branch=master
-          type=sha
+          type=ref,event=branch
           type=ref,event=pr
+          type=match,pattern=(?<=\/)\d+\.\d+\.\d+.*
+          type=sha
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
