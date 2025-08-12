@@ -1,0 +1,20 @@
+# Use an official Python runtime as a parent image
+FROM python:3.13-slim-bullseye
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Force python to run in unbuffered mode.
+ENV PYTHONUNBUFFERED=1
+
+# Copy the requirements file into the container at /app
+COPY requirements.txt .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application's code from the "src" directory into the container at /app
+COPY src/ .
+
+# Run main.py when the container launches
+CMD ["python", "main.py"]
