@@ -1,0 +1,10 @@
+# Use the official Postgres image
+FROM postgres:17
+
+# Set default database, user, and password
+# So it'd be possible to run it without any env. variables
+ENV POSTGRES_USER=hackathon
+ENV POSTGRES_PASSWORD=hackathon
+ENV POSTGRES_DB=hackathon_db
+
+EXPOSE 5432
