@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build & Push Sample Database Image
 
 on:
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: .
-        file: Dockefile.db
+        file: Dockerfile.db
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
