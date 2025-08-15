@@ -59,11 +59,14 @@ def main():
 
         if database_enabled:
             logger.info("Interacting with database..")
-            db.write_row()
-            row_count = db.get_row_count()
-            if metrics_enabled:
-                metrics.write_counter("rows_created", 1)
-            logger.info(f"There are {row_count} rows in the database")
+            try:
+                db.write_row()
+                row_count = db.get_row_count()
+                if metrics_enabled:
+                    metrics.write_counter("rows_created", 1)
+                logger.info(f"There are {row_count} rows in the database")
+            except Exception as e:
+                logger.error(f"Failed to interact with database: {e}")
         else:
             logger.warn("Skipping database interaction, because it is not configured.")
 

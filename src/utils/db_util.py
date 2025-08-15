@@ -13,9 +13,9 @@ class DbUtil:
             self.conn = psycopg2.connect(self.connection_string)
             self.logger.info(f"Connected to database: {self.conn.get_dsn_parameters()['dbname']}")
             with self.conn.cursor() as cur:
-                cur.execute("CREATE TABLE IF NOT EXISTS public.hackathon (timestamp TEXT);");
+                cur.execute("CREATE TABLE IF NOT EXISTS public.hackathon (timestamp TEXT);")
             self.conn.commit()
-        except psycopg2.Error as e:
+        except Exception as e:
             self.logger.error(f"Failed to connect to database: {e}")
             raise
 
