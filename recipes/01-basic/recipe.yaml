@@ -1,0 +1,6 @@
+recipeVersion: 1.0.0-alpha.1
+applications:
+  - name: hackathon-python-app
+    containers:
+      - name: sample-app 
+        image: ghcr.io/liciniomendes-vestas/hackathon-2025-python-samples/sample-app:master
