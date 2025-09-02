@@ -3,11 +3,11 @@ applications:
   - name: hackathon-python-app
     containers:
       - name: sample-app 
-        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-app:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-python-samples/sample-app:sha-d037f05
   - name: hackathon-database
     containers:
       - name: database
-        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-db:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-python-samples/sample-db:sha-d037f05
         volumes:
           - name: data
             path: /var/lib/postgresql/data

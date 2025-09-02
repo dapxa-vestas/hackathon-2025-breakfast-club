@@ -3,4 +3,4 @@ applications:
   - name: hackathon-python-app
     containers:
       - name: sample-app 
-        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-app:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-python-samples/sample-app:sha-d037f05
