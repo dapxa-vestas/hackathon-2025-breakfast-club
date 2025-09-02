@@ -3,14 +3,15 @@ applications:
   - name: hackathon-python-app
     containers:
       - name: sample-app 
-        image: ghcr.io/liciniomendes-vestas/hackathon-2025-python-samples/sample-app:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-app:master
   - name: hackathon-database
     containers:
       - name: database
-        image: ghcr.io/liciniomendes-vestas/hackathon-2025-python-samples/sample-db:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-db:master
         volumes:
           - name: data
             path: /var/lib/postgresql/data
             size: 200Mi
+            persistent: true
     ports:
       - port: 5432

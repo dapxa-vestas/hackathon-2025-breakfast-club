@@ -6,5 +6,6 @@ FROM postgres:17
 ENV POSTGRES_USER=hackathon
 ENV POSTGRES_PASSWORD=hackathon
 ENV POSTGRES_DB=hackathon_db
+ENV PGDATA=/var/lib/postgresql/data/pgdata
 
 EXPOSE 5432

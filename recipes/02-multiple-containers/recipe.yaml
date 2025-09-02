@@ -3,6 +3,6 @@ applications:
   - name: hackathon-python-app
     containers:
       - name: sample-app 
-        image: ghcr.io/liciniomendes-vestas/hackathon-2025-python-samples/sample-app:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-app:master
       - name: database
-        image: ghcr.io/liciniomendes-vestas/hackathon-2025-python-samples/sample-db:master
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-cplusplus-samples/sample-db:master
