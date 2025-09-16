@@ -21,6 +21,7 @@ stop_event = threading.Event()
 # Function to broadcast running state to all listeners
 def broadcast(unit_id, running):
     msg = json.dumps({'unit_id': unit_id, 'running': running}) + '\n'
+    print(f"Broadcast message: {msg.strip()}")  # Print the actual message sent
     for conn in listeners[:]:
         try:
             conn.sendall(msg.encode())
