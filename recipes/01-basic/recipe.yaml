@@ -1,6 +1,7 @@
-recipeVersion: 1.0.0-alpha.1
 applications:
-  - name: hackathon-python-app
+  - name: breakfast-club-app
     containers:
-      - name: sample-app 
-        image: registry-pminds.ns-azweu-stg.vks.vestas.net/hackathon-2025-python-samples/sample-app:sha-d037f05
+      - name: data-server 
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/wl-breakfast-club/data_server:v1
+      - name: data-collector 
+        image: registry-pminds.ns-azweu-stg.vks.vestas.net/wl-breakfast-club/data_collector:v1
