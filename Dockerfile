@@ -16,5 +16,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application's code from the "src" directory into the container at /app
 COPY src/ .
 
-# Run main.py when the container launches
-CMD ["python", "main.py"]
+# Copy the wind data file needed by the TCP server
+COPY data/wind_data.json ../data/
+
+# Run tcp_server.py when the container launches
+CMD ["python", "tcp_server.py"]
