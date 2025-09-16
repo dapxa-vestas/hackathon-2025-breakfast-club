@@ -8,7 +8,7 @@ from collections import defaultdict, deque
 # TCP client that connects to the upstream server and receives streamed windspeed and wind direction data
 # Calculates running state and streams unit_id and running state to any listener via TCP
 
-HOST = '127.0.0.1'  # Upstream server's hostname or IP address
+HOST = 'breakfast-club-app-server'  # Upstream server's hostname or IP address
 PORT = 65432        # Upstream server port
 BROADCAST_PORT = 65433  # Port to broadcast running state
 

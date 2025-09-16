@@ -78,7 +78,7 @@ def plot_png():
     buf = create_plot()
     return send_file(buf, mimetype='image/png')
 
-def tcp_listener(host='127.0.0.1', port=65433):
+def tcp_listener(host='breakfast-club-app-client', port=65433):
     """Listen to TCP broadcast and update running_states."""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((host, port))

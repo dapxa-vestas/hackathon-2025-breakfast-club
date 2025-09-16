@@ -7,7 +7,7 @@ import sys
 # TCP server that streams windspeed and wind direction data from a JSON file to any connected clients
 # The stream is infinite: when the end of the data is reached, it starts over
 
-HOST = '0.0.0.0'  # Listen on all interfaces
+HOST = 'breakfast-club-app-server'  # Listen on all interfaces
 PORT = 65432      # Port to listen on
 
 # Load windspeed data from JSON file
