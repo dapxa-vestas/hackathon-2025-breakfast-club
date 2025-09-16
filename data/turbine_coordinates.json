@@ -1,0 +1,29 @@
+{
+  "units": [
+    {
+      "unit_id": "254425",
+      "Latitude": 54.360554,
+      "Longitude": 6.181554
+    },
+    {
+      "unit_id": "254467",
+      "Latitude": 54.368952,
+      "Longitude": 6.207864
+    },
+    {
+      "unit_id": "254468",
+      "Latitude": 54.375186,
+      "Longitude": 6.225135
+    },
+    {
+      "unit_id": "254469",
+      "Latitude": 54.367241,
+      "Longitude": 6.236619
+    },
+    {
+      "unit_id": "254473",
+      "Latitude": 54.357051,
+      "Longitude": 6.251034
+    }
+  ]
+}
