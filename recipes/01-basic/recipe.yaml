@@ -1,7 +1,14 @@
 applications:
-  - name: breakfast-club-app
+  - name: breakfast-club-app-server
     containers:
-      - name: data-server 
+      - name: data-server
         image: registry-pminds.ns-azweu-stg.vks.vestas.net/wl-breakfast-club/data_server:v1
-      - name: data-collector 
+        volumes:
+          - name: data
+            path: /var/lib/postgresql/data
+            size: 200Mi
+            persistent: true
+  - name: breakfast-club-app-client
+    containers:
+      - name: data-collector
         image: registry-pminds.ns-azweu-stg.vks.vestas.net/wl-breakfast-club/data_collector:v1
